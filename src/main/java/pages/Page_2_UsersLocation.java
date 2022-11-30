@@ -1,0 +1,50 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Page_2_UsersLocation extends BasePage {
+    public Page_2_UsersLocation(WebDriver driver) {
+        super(driver);
+    }
+
+    @FindBy(id = "nav-global-location-data-modal-action")
+    protected WebElement DeliverTo;
+    @FindBy(xpath = "//*[@id=\"GLUXCountryValue\"]")
+    protected WebElement openChooseSection;
+    @FindBy(id = "GLUXCountryList_6")
+    protected WebElement UnitedKingdomButton;
+    @FindBy(name = "glowDoneButton")
+    protected WebElement DoneButton;
+
+    public void clickDeliverToButton() {
+        DeliverTo.click();
+    }
+
+    public void openChooseSection() {
+        System.out.println("--- Where is the user from ? ---");
+        openChooseSection.click();
+        openChooseSection.getText();
+        String Title = openChooseSection.getText();
+        System.out.println("The user location is a : " + Title);
+    }
+
+
+    public void checkWhereTheUserIsFrom() throws InterruptedException {
+        String Title = openChooseSection.getText();
+        if (Title.equals("Armenia")) {
+            UnitedKingdomButton.click();
+            Thread.sleep(2000);
+            System.out.println("The user is from : " + Title);
+            DoneButton.click();
+        } else {
+            DoneButton.click();
+            System.out.println("The user is from : United Kingdom");
+
+        }
+        Thread.sleep(2000);
+        System.out.println();
+    }
+
+}
