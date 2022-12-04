@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Page_1_SignIn extends BasePage {
 
@@ -11,12 +15,14 @@ public class Page_1_SignIn extends BasePage {
         super(driver);
     }
 
+    @FindBy(xpath = "/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[1]")
+    protected WebElement TodayDealButton;
     @FindBy(id = "nav-link-accountList")
     protected WebElement clickLogInField;
     @FindBy(id = "continue")
     protected WebElement clickContinueButton;
     @FindBy(name = "rememberMe")
-    protected WebElement checkBox;
+    protected WebElement checkBoxButton;
     @FindBy(id = "signInSubmit")
     protected WebElement clickSignInButton;
 
@@ -38,11 +44,10 @@ public class Page_1_SignIn extends BasePage {
     }
 
     public void clickCheckBoxButton() {
-        checkBox.click();
+        checkBoxButton.click();
     }
 
     public void clickSignInButton() {
         clickSignInButton.click();
     }
-
 }

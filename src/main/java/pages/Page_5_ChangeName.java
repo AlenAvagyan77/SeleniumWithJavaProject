@@ -15,62 +15,62 @@ public class Page_5_ChangeName extends BasePage {
     }
 
     @FindBy(id = "nav-link-accountList")
-    protected WebElement AccountList;
+    protected WebElement AccountListButton;
     @FindBy(xpath = "//*[@id=\"a-page\"]/div[2]/div/div[3]/div[3]/a/div/div")
-    protected WebElement YourProfile;
+    protected WebElement YourProfileButton;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[1]/form")
-    protected WebElement YourNameLine;
+    protected WebElement YourNameLineButton;
     @FindBy(id = "name-edit-pencil-image")
-    protected WebElement NameEdit;
+    protected WebElement NameEditButton;
     @FindBy(id = "profile-name-text-input")
-    protected WebElement NameLine;
+    protected WebElement NameLineButton;
     @FindBy(xpath = "/html/body/div[3]/div/div/div/form/div[2]/span/span/input")
-    protected WebElement SaveChanges;
+    protected WebElement SaveChangesButton;
 
     public void clickOnTheAccountList() {
-        AccountList.click();
+        AccountListButton.click();
     }
 
     public void clickOnTheYourProfile() {
-        YourProfile.click();
+        YourProfileButton.click();
     }
 
     public void clickOnTheYourNameLine() {
-        YourNameLine.click();
+        YourNameLineButton.click();
     }
 
     public void waitUntilVisible() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-        wait.until(ExpectedConditions.elementToBeClickable(NameEdit));
+        wait.until(ExpectedConditions.elementToBeClickable(NameEditButton));
 
     }
 
     public void clickOnTheNameEdit() {
-        NameEdit.click();
+        NameEditButton.click();
     }
 
     public void changeName() {
-        NameLine.click();
-        NameLine.getAttribute("value");
+        NameLineButton.click();
+        NameLineButton.getAttribute("value");
         System.out.println("--- What is a username ? ---");
-        System.out.println("Name was a : " + NameLine.getAttribute("value"));
-        NameLine.clear();
+        System.out.println("Name was a : " + NameLineButton.getAttribute("value"));
+        NameLineButton.clear();
         Faker faker = new Faker();
         String firstName = faker.name().firstName();
         String lastName = faker.name().lastName();
         String fullName = firstName + " " + lastName;
-        NameLine.sendKeys(fullName);
+        NameLineButton.sendKeys(fullName);
         System.out.println("Current name is an : " + fullName);
 
     }
 
     public void clickSaveChangesButton() {
-        SaveChanges.click();
+        SaveChangesButton.click();
     }
 
     public void waitUntilSaveChangesVisible() {
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait1.until(ExpectedConditions.elementToBeClickable(SaveChanges));
+        wait1.until(ExpectedConditions.elementToBeClickable(SaveChangesButton));
 
     }
 }

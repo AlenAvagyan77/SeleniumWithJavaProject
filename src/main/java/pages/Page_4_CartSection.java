@@ -18,7 +18,7 @@ public class Page_4_CartSection extends BasePage{
     @FindBy(id = "add-to-cart-button")
     protected WebElement AddToCartButton;
     @FindBy(id = "nav-cart")
-    protected WebElement CartSection;
+    protected WebElement CartSectionButton;
     @FindBy(className = "a-color-link")
     protected WebElement DeleteButton;
 
@@ -31,7 +31,7 @@ public class Page_4_CartSection extends BasePage{
     }
 
     public void clickCartSection(){
-        CartSection.click();
+        CartSectionButton.click();
     }
     public void deleteAllProductOfList() throws InterruptedException {
        List<WebElement> elements = driver.findElements(By.xpath("//img[@class = \"sc-product-image\"]"));

@@ -10,7 +10,7 @@ public class Page_2_UsersLocation extends BasePage {
     }
 
     @FindBy(id = "nav-global-location-data-modal-action")
-    protected WebElement DeliverTo;
+    protected WebElement DeliverToButton;
     @FindBy(xpath = "//*[@id=\"GLUXCountryValue\"]")
     protected WebElement openChooseSection;
     @FindBy(id = "GLUXCountryList_6")
@@ -19,7 +19,7 @@ public class Page_2_UsersLocation extends BasePage {
     protected WebElement DoneButton;
 
     public void clickDeliverToButton() {
-        DeliverTo.click();
+        DeliverToButton.click();
     }
 
     public void openChooseSection() {

@@ -16,27 +16,27 @@ public class Page_7_SignOut extends BasePage {
     }
 
     @FindBy(id = "nav-link-accountList")
-    protected WebElement AccountAndList;
+    protected WebElement AccountAndListButton;
     @FindBy(linkText = "Sign Out")
-    protected WebElement SignOut;
+    protected WebElement SignOutButton;
 
 
     public void openPromptSection() {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(AccountAndList).perform();
+        actions.moveToElement(AccountAndListButton).perform();
     }
 
     public void waitUntilToBeVisibleSignOutButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-        wait.until(ExpectedConditions.visibilityOf(AccountAndList));
+        wait.until(ExpectedConditions.visibilityOf(AccountAndListButton));
 
     }
 
     public void clickOnTheSignOutButton() {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-        wait.until(ExpectedConditions.visibilityOf(SignOut));
-        SignOut.click();
+        wait.until(ExpectedConditions.visibilityOf(SignOutButton));
+        SignOutButton.click();
     }
 }

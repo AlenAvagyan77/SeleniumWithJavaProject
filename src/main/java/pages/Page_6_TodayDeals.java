@@ -17,41 +17,34 @@ public class Page_6_TodayDeals extends BasePage {
     }
 
     @FindBy(linkText = "Today's Deals")
-    protected WebElement TodayDeals;
-    @FindBy(xpath = "/html/body/div[1]/div[21]/div/div/div/div[2]/div[2]/span[3]/ul/li[33]/label/input")
-    protected WebElement MensWatches;
+    protected WebElement TodayDealsButton;
+    @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[33]")
+    protected WebElement MensWatchesButton;
     @FindBy(xpath = "//div[@id=\"refinement-department\"]/ul/li/span/ul/li[2]/span/span/span")
     protected WebElement MenButton;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[1]/ul/li[9]/span/span/span/input")
-    protected WebElement BeforePlayVideo;
-    @FindBy(xpath = "//div[@id=\"main-video-container\"]/div/div[12]/div/div/div[2]")
-    protected WebElement PlayVideo;
+    @FindBy(xpath = "//span[@id=\"a-autoid-6\"]/span/input")
+    protected WebElement BeforePlayVideoButton;
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[3]/ul/li[7]/span/span/div/div/div/div[12]/div/div")
+    protected WebElement PlayVideoButton;
     @FindBy(id = "add-to-cart-button")
     protected WebElement AddToCartButton;
     @FindBy(id = "nav-logo-sprites")
-    protected WebElement MainPage;
-    @FindBy(xpath = "//*[@id=\"altImages\"]/ul/li")
-    protected List<WebElement> ListOfImages;
-    @FindBy(xpath = "//*[@id=\"altImages\"]/ul/li")
-    protected WebElement ButtonOfImages;
-
-
+    protected WebElement MainPageButton;
 
 
     public void clickOnTheTodayDealButton() {
-        TodayDeals.click();
+        TodayDealsButton.click();
 
     }
 
-    public void scrollDownAndClickOnTheMenWatchesButton(){
+    public void scrollDownAndClickOnTheMenWatchesButton() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //Scroll down till the bottom of the page
-        js.executeScript("window.scrollBy(0,1000)");
-        MensWatches.click();
+        js.executeScript("window.scrollBy(0,800)");
     }
 
-    public void waitUntilMensWatchesVisible(){
-        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.visibilityOf(MensWatches));
+    public void waitUntilMensWatchesVisible() {
+        MensWatchesButton.click();
     }
 
     public void waitForSelectRandomItemPageLoaded(String TitleOfWatches) {
@@ -60,10 +53,11 @@ public class Page_6_TodayDeals extends BasePage {
         element.click();
     }
 
-    public void clickOnTheMenButton(){
+    public void clickOnTheMenButton() {
         MenButton.click();
     }
-    public void waitUntilMenButtonVisible(){
+
+    public void waitUntilMenButtonVisible() {
         new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(MenButton));
     }
 
@@ -72,27 +66,22 @@ public class Page_6_TodayDeals extends BasePage {
         WebElement element = driver.findElement(By.linkText(TitleOfWatches));
         element.click();
     }
-    public void clickEveryItem() throws InterruptedException {
-        for (int i = 0; i < ListOfImages.size(); i++) {
-            ButtonOfImages.click();
-            Thread.sleep(1000);
-        }
+
+    public void clickOnTheBeforePlayVideo() {
+        BeforePlayVideoButton.click();
     }
 
-    public void clickOnTheBeforePlayVideo(){
-        BeforePlayVideo.click();
-    }
-    public void waitWhileElementIsNotVisible(){
-        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.visibilityOf(PlayVideo));
-        PlayVideo.click();
+    public void waitWhileElementIsNotVisible() {
+        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.visibilityOf(PlayVideoButton));
+        PlayVideoButton.click();
     }
 
-    public void clickAddToCartButton(){
+    public void clickAddToCartButton() {
         AddToCartButton.click();
     }
 
-    public void clickOnTheMainPageButton(){
-        MainPage.click();
+    public void clickOnTheMainPageButton() {
+        MainPageButton.click();
     }
 
 }

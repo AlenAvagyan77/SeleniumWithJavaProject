@@ -26,8 +26,8 @@ public class TestCase_5_TodayDeals {
         signIn.clickPasswordField("043444255");
         signIn.clickCheckBoxButton();
         signIn.clickSignInButton();
-
     }
+
     @Test(priority = 1)
     public void TodayDeals() throws InterruptedException {
         Page_6_TodayDeals todayDeals = new Page_6_TodayDeals(DriverFactory.getDriver());
