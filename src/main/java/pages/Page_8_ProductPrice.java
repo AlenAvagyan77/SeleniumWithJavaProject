@@ -20,7 +20,7 @@ public class Page_8_ProductPrice extends BasePage {
     protected WebElement MainPageButton;
     @FindBy(xpath = "/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[1]")
     protected WebElement TodayDealButton;
-    @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[33]")
+    @FindBy(xpath = "//*[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[32]/label/input")
     protected WebElement MensWatchesButton;
     @FindBy(xpath = "//span[@class=\"a-button-text a-declarative\"]")
     protected WebElement FilterButton;

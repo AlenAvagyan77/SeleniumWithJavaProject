@@ -58,7 +58,7 @@ public class Page_6_TodayDeals extends BasePage {
     }
 
     public void waitUntilMenButtonVisible() {
-        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(MenButton));
+        new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(MenButton));
     }
 
     public void waitWhileTheUserClickOnTheWatches(String TitleOfWatches) {

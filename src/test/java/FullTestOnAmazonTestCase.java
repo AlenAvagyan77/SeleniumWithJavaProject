@@ -78,7 +78,7 @@ public class FullTestOnAmazonTestCase {
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$100.33"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.62"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();
