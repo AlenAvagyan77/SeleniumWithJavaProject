@@ -33,11 +33,18 @@ public class TestCase_5_TodayDeals {
         Page_6_TodayDeals todayDeals = new Page_6_TodayDeals(DriverFactory.getDriver());
         todayDeals.clickOnTheTodayDealButton();
         todayDeals.scrollDownAndClickOnTheMenWatchesButton();
+        Thread.sleep(1000);
         todayDeals.waitUntilMensWatchesVisible();
-        todayDeals.waitForSelectRandomItemPageLoaded("Watches from Fossil, Anne Klein, Timex, and more");
-        todayDeals.waitUntilMenButtonVisible();
-        todayDeals.clickOnTheMenButton();
+        Thread.sleep(2000);
+        todayDeals.scrollUpAndClickOnTheMenWatchesButton();
+//        todayDeals.clickOnTheMainWatch()
+        Thread.sleep(2000);
+        todayDeals.clickOnTheFilterButton();
+        Thread.sleep(1000);
+        todayDeals.clickOnThePriceHighToLowButton();
+        todayDeals.scrollDown();
         todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Japanese Mechanical Automatic Watch");
+        Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         todayDeals.waitWhileElementIsNotVisible();
         Thread.sleep(22000);

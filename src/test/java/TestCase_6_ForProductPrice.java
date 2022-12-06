@@ -44,12 +44,14 @@ public class TestCase_6_ForProductPrice {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
+        productPrice.clickOnTheWAtches("Invicta Men's 10640 Pro Diver Diver Buckle 300m Watch");
+        Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$100.33"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.62"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

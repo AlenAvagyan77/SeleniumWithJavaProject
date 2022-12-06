@@ -14,7 +14,7 @@ public class FullTestOnAmazonTestCase {
     }
 
     @Test
-    public void SignInForAmazon() {
+    public void SignInForAmazon() throws InterruptedException {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
@@ -24,6 +24,7 @@ public class FullTestOnAmazonTestCase {
         signIn.clickPasswordField("043444255");
         signIn.clickCheckBoxButton();
         signIn.clickSignInButton();
+        Thread.sleep(9000);
 
 
     }
@@ -44,11 +45,17 @@ public class FullTestOnAmazonTestCase {
         todayDeals.clickOnTheTodayDealButton();
         todayDeals.scrollDownAndClickOnTheMenWatchesButton();
         Thread.sleep(1000);
-        todayDeals.waitForSelectRandomItemPageLoaded("Watches from Fossil, Anne Klein, Timex, and more");
-        todayDeals.waitUntilMenButtonVisible();
-        todayDeals.clickOnTheMenButton();
+        todayDeals.waitUntilMensWatchesVisible();
+        Thread.sleep(2000);
+        todayDeals.scrollUpAndClickOnTheMenWatchesButton();
+//        todayDeals.clickOnTheMainWatch()
+        Thread.sleep(2000);
+        todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
+        todayDeals.clickOnThePriceHighToLowButton();
+        todayDeals.scrollDown();
         todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Japanese Mechanical Automatic Watch");
+        Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         todayDeals.waitWhileElementIsNotVisible();
         Thread.sleep(22000);

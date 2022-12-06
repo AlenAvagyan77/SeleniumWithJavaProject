@@ -20,9 +20,9 @@ public class Page_8_ProductPrice extends BasePage {
     protected WebElement MainPageButton;
     @FindBy(xpath = "/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[1]")
     protected WebElement TodayDealButton;
-    @FindBy(xpath = "//*[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[32]/label/input")
+    @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[33]")
     protected WebElement MensWatchesButton;
-    @FindBy(xpath = "//span[@class=\"a-button-text a-declarative\"]")
+    @FindBy(className = "a-dropdown-container")
     protected WebElement FilterButton;
     @FindBy(linkText = "Price - High to Low")
     protected WebElement DiscountLowToHighButton;
@@ -54,6 +54,7 @@ public class Page_8_ProductPrice extends BasePage {
 
 
     public void clickOnTheMenWatchesButton() {
+        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.visibilityOf((MensWatchesButton)));
         MensWatchesButton.click();
     }
 
@@ -65,6 +66,7 @@ public class Page_8_ProductPrice extends BasePage {
     }
 
     public void clickOnTheFilterButton() {
+        new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(FilterButton));
         FilterButton.click();
     }
 

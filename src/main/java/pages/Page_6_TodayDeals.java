@@ -20,9 +20,13 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement TodayDealsButton;
     @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[33]")
     protected WebElement MensWatchesButton;
-    @FindBy(xpath = "//div[@id=\"refinement-department\"]/ul/li/span/ul/li[2]/span/span/span")
-    protected WebElement MenButton;
-    @FindBy(xpath = "//span[@id=\"a-autoid-6\"]/span/input")
+    @FindBy(linkText = "Watches from Fossil, Anne Klein, Timex, and more")
+    protected WebElement WatchButton;
+    @FindBy(id = "octopus-dlp-sort-option")
+    protected WebElement FilterButton;
+    @FindBy(linkText = "Price: High to Low")
+    protected WebElement PriceHighToLowButton;
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[1]/ul/li[7]/span/span")
     protected WebElement BeforePlayVideoButton;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[3]/ul/li[7]/span/span/div/div/div/div[12]/div/div")
     protected WebElement PlayVideoButton;
@@ -47,19 +51,33 @@ public class Page_6_TodayDeals extends BasePage {
         MensWatchesButton.click();
     }
 
-    public void waitForSelectRandomItemPageLoaded(String TitleOfWatches) {
-        new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(By.linkText(TitleOfWatches)));
-        WebElement element = driver.findElement(By.linkText(TitleOfWatches));
-        element.click();
+    public void scrollUpAndClickOnTheMenWatchesButton() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Scroll down till the bottom of the page
+        js.executeScript("window.scrollBy(0,-400)");
+        WatchButton.click();
+
     }
 
-    public void clickOnTheMenButton() {
-        MenButton.click();
+
+    public void clickOnTheFilterButton() {
+        FilterButton.click();
     }
 
     public void waitUntilMenButtonVisible() {
-        new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(MenButton));
+        new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(FilterButton));
     }
+
+    public void clickOnThePriceHighToLowButton() {
+        PriceHighToLowButton.click();
+    }
+
+    public void scrollDown() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Scroll down till the bottom of the page
+        js.executeScript("window.scrollBy(0,-100)");
+    }
+
 
     public void waitWhileTheUserClickOnTheWatches(String TitleOfWatches) {
         new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(By.linkText(TitleOfWatches)));
