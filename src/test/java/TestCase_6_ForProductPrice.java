@@ -31,6 +31,7 @@ public class TestCase_6_ForProductPrice {
 
 
 
+
     @Test(priority = 1)
     public void ProductPrice() throws InterruptedException {
         Page_8_ProductPrice productPrice = new Page_8_ProductPrice(DriverFactory.getDriver());
@@ -51,7 +52,7 @@ public class TestCase_6_ForProductPrice {
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.62"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.74"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

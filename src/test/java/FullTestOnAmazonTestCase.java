@@ -52,9 +52,9 @@ public class FullTestOnAmazonTestCase {
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
-        todayDeals.clickOnThePriceHighToLowButton();
-        todayDeals.scrollDown();
-        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Japanese Mechanical Automatic Watch");
+        todayDeals.clickOnTheAvgCustomerReview();
+        Thread.sleep(2000);
+        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         todayDeals.waitWhileElementIsNotVisible();
@@ -85,7 +85,7 @@ public class FullTestOnAmazonTestCase {
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.62"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.74"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

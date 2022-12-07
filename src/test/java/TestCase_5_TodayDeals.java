@@ -37,13 +37,12 @@ public class TestCase_5_TodayDeals {
         todayDeals.waitUntilMensWatchesVisible();
         Thread.sleep(2000);
         todayDeals.scrollUpAndClickOnTheMenWatchesButton();
-//        todayDeals.clickOnTheMainWatch()
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
-        todayDeals.clickOnThePriceHighToLowButton();
-        todayDeals.scrollDown();
-        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Japanese Mechanical Automatic Watch");
+        todayDeals.clickOnTheAvgCustomerReview();
+        Thread.sleep(2000);
+        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         todayDeals.waitWhileElementIsNotVisible();

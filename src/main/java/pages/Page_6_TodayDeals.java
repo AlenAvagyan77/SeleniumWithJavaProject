@@ -24,11 +24,11 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement WatchButton;
     @FindBy(id = "octopus-dlp-sort-option")
     protected WebElement FilterButton;
-    @FindBy(linkText = "Price: High to Low")
+    @FindBy(linkText = "Avg. Customer Review")
     protected WebElement PriceHighToLowButton;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[1]/ul/li[7]/span/span")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[1]/ul/li[6]/span/span/span/input")
     protected WebElement BeforePlayVideoButton;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[3]/ul/li[7]/span/span/div/div/div/div[12]/div/div")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[3]/ul/li[6]/span/span/div/div/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;
     @FindBy(id = "add-to-cart-button")
     protected WebElement AddToCartButton;
@@ -68,16 +68,9 @@ public class Page_6_TodayDeals extends BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(FilterButton));
     }
 
-    public void clickOnThePriceHighToLowButton() {
+    public void clickOnTheAvgCustomerReview() {
         PriceHighToLowButton.click();
     }
-
-    public void scrollDown() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //Scroll down till the bottom of the page
-        js.executeScript("window.scrollBy(0,-100)");
-    }
-
 
     public void waitWhileTheUserClickOnTheWatches(String TitleOfWatches) {
         new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(By.linkText(TitleOfWatches)));
