@@ -16,6 +16,8 @@ public class Page_3_SearchProduct extends BasePage {
         super(driver);
     }
 
+    @FindBy(id = "add-to-cart-button")
+    protected WebElement AddToCartButton;
     @FindBy(id = "twotabsearchtextbox")
     protected WebElement productField;
     @FindBy(id = "nav-search-submit-button")
@@ -41,5 +43,13 @@ public class Page_3_SearchProduct extends BasePage {
         driver.findElement(By.linkText("Dell Inspiron 15.6-inch Full HD Touch Screen AMD Ryzen 5 3450U Quad-Core 8GB RAM 256GB SSD Windows 10 Laptop")).click();
 
     }
+    public void clickAddToCartButton(){
+        AddToCartButton.click();
+    }
+    public void waitForToBeVisibleAddToCartButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
+        wait.until(ExpectedConditions.visibilityOf(AddToCartButton));
+    }
+
 
 }

@@ -15,20 +15,12 @@ public class Page_4_CartSection extends BasePage{
         super(driver);
     }
 
-    @FindBy(id = "add-to-cart-button")
-    protected WebElement AddToCartButton;
+
     @FindBy(id = "nav-cart")
     protected WebElement CartSectionButton;
     @FindBy(className = "a-color-link")
     protected WebElement DeleteButton;
 
-    public void clickAddToCartButton(){
-        AddToCartButton.click();
-    }
-    public void waitForToBeVisibleAddToCartButton() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-        wait.until(ExpectedConditions.visibilityOf(AddToCartButton));
-    }
 
     public void clickCartSection(){
         CartSectionButton.click();

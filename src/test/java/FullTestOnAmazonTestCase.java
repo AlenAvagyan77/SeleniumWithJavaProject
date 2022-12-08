@@ -48,7 +48,6 @@ public class FullTestOnAmazonTestCase {
         todayDeals.waitUntilMensWatchesVisible();
         Thread.sleep(2000);
         todayDeals.scrollUpAndClickOnTheMenWatchesButton();
-//        todayDeals.clickOnTheMainWatch()
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
@@ -98,14 +97,18 @@ public class FullTestOnAmazonTestCase {
         searchProduct.waitForToBeVisibleSearchField("Dell Vostro 3515 8GB Ram, 256 SSD, Ryzen 5");
         searchProduct.clickSearchButton();
         searchProduct.clickOnTheProduct();
-        Page_4_CartSection cartSection = new Page_4_CartSection(DriverFactory.getDriver());
-        cartSection.clickAddToCartButton();
-        cartSection.clickCartSection();
-        cartSection.deleteAllProductOfList();
+        searchProduct.clickAddToCartButton();
 
     }
 
     @Test(priority = 5)
+    public void DeleteAllProductsFromCart() throws InterruptedException {
+        Page_4_CartSection cartSection = new Page_4_CartSection(DriverFactory.getDriver());
+        cartSection.clickCartSection();
+        cartSection.deleteAllProductOfList();
+    }
+
+    @Test(priority = 6)
     public void ChangeName() {
         Page_5_ChangeName changeName = new Page_5_ChangeName(DriverFactory.getDriver());
         changeName.clickOnTheAccountList();
@@ -119,7 +122,7 @@ public class FullTestOnAmazonTestCase {
 
     }
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void SignOut() throws InterruptedException {
         Page_7_SignOut signOut = new Page_7_SignOut(DriverFactory.getDriver());
         signOut.openPromptSection();

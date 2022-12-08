@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class TestCase_3_SearchProduct {
+public class TestCase_4_DeleteAllProductFromCart {
     @BeforeMethod
     public void initDriver() {
         DriverFactory.initDriver(BrowserType.CHROME);
@@ -44,9 +44,17 @@ public class TestCase_3_SearchProduct {
         searchProduct.clickSearchButton();
         searchProduct.clickOnTheProduct();
         searchProduct.clickAddToCartButton();
+    }
+
+    @Test(priority = 3)
+    public void DeleteAllProductFromCart() throws InterruptedException {
+        Page_4_CartSection cartSection = new Page_4_CartSection(DriverFactory.getDriver());
+        cartSection.clickCartSection();
+        cartSection.deleteAllProductOfList();
 
     }
-    @Test(priority = 3)
+
+    @Test(priority = 4)
     public void SignOut() throws InterruptedException {
         Page_7_SignOut signOut = new Page_7_SignOut(DriverFactory.getDriver());
         signOut.openPromptSection();
@@ -62,5 +70,4 @@ public class TestCase_3_SearchProduct {
         }
     }
 }
-
 
