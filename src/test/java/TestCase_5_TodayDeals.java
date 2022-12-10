@@ -45,8 +45,11 @@ public class TestCase_5_TodayDeals {
         todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
+        Thread.sleep(2000);
         todayDeals.waitWhileElementIsNotVisible();
+        todayDeals.clickOnTheZoomWindowButton();
         Thread.sleep(22000);
+        todayDeals.clickOnTheAfterZoomWindowButton();
         todayDeals.clickAddToCartButton();
         todayDeals.clickOnTheMainPageButton();
 

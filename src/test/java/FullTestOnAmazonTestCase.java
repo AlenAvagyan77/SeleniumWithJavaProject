@@ -56,11 +56,13 @@ public class FullTestOnAmazonTestCase {
         todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
+        Thread.sleep(2000);
         todayDeals.waitWhileElementIsNotVisible();
+        todayDeals.clickOnTheZoomWindowButton();
         Thread.sleep(22000);
+        todayDeals.clickOnTheAfterZoomWindowButton();
         todayDeals.clickAddToCartButton();
         todayDeals.clickOnTheMainPageButton();
-
     }
 
 
@@ -77,14 +79,14 @@ public class FullTestOnAmazonTestCase {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
-        productPrice.clickOnTheWAtches("Invicta Men's 10640 Pro Diver Diver Buckle 300m Watch");
+        productPrice.clickOnTheWAtches("Mens Watches Chronograph Stainless Steel Waterproof Date Analog Quartz Watch Business Wrist Watches for Men");
         Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$101.74"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$31.05"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

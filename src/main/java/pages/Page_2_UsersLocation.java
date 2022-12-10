@@ -40,7 +40,7 @@ public class Page_2_UsersLocation extends BasePage {
             DoneButton.click();
         } else {
             DoneButton.click();
-            System.out.println("The user is from : United Kingdom");
+            System.out.println("It has not changed because He is from the : United Kingdom");
 
         }
         Thread.sleep(2000);
