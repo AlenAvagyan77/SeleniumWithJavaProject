@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import pages.*;
 
 
-public class TestCase_SignOut {
+public class TestCase_7_SignOut {
     @BeforeMethod
     public void initDriver() {
         DriverFactory.initDriver(BrowserType.CHROME);
