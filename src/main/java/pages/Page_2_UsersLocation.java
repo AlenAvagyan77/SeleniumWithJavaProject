@@ -36,7 +36,7 @@ public class Page_2_UsersLocation extends BasePage {
         if (Title.equals("Armenia")) {
             UnitedKingdomButton.click();
             Thread.sleep(2000);
-            System.out.println("The user is from : " + Title);
+            System.out.println("It has changed because he is from : " + Title);
             DoneButton.click();
         } else {
             DoneButton.click();
