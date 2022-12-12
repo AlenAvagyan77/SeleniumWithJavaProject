@@ -14,12 +14,12 @@ public class HomePage extends BasePage {
         driver.get(HOME_URL);
     }
 
-    public String ActualURL(){
-        return driver.getCurrentUrl();
+    public String ActualTitle(){
+        return driver.getTitle();
 
     }
-    public String ExpectedURL(){
-        return "https://www.amazon.com/";
+    public String ExpectedTitle(){
+        return "Amazon.com. Spend less. Smile more.";
     }
 
 }

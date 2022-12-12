@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import pages.Page_1_SignIn;
 
@@ -18,6 +19,9 @@ public class TestCase_1_SignIn {
     public void SignInForAmazon() {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
+        softAssert.assertAll("An incorrect URL was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
         signIn.writeLogIn("043444255");

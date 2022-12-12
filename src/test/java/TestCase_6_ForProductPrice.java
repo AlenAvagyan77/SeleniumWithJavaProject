@@ -20,6 +20,9 @@ public class TestCase_6_ForProductPrice {
     public void SignInForAmazon() throws InterruptedException {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
+        softAssert.assertAll("An incorrect URL was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
         signIn.writeLogIn("043444255");

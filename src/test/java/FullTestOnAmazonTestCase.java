@@ -18,7 +18,7 @@ public class FullTestOnAmazonTestCase {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(homePage.ActualURL(), homePage.ExpectedURL());
+        softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
         softAssert.assertAll("An incorrect URL was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
