@@ -17,6 +17,9 @@ public class FullTestOnAmazonTestCase {
     public void SignInForAmazon() throws InterruptedException {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(homePage.ActualURL(), homePage.ExpectedURL());
+        softAssert.assertAll("An incorrect URL was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
         signIn.writeLogIn("043444255");
@@ -24,7 +27,7 @@ public class FullTestOnAmazonTestCase {
         signIn.clickPasswordField("043444255");
         signIn.clickCheckBoxButton();
         signIn.clickSignInButton();
-        Thread.sleep(9000);
+        Thread.sleep(10000);
 
 
     }
@@ -51,9 +54,9 @@ public class FullTestOnAmazonTestCase {
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
-        todayDeals.clickOnTheAvgCustomerReview();
+        todayDeals.clickOnTheNewestArrivals();
         Thread.sleep(2000);
-        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
+        todayDeals.waitWhileTheUserClickOnTheWatches("Sport Retro Digital Chronograph Mesh Bracelet Watch, 40/8485");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         Thread.sleep(2000);
@@ -79,14 +82,14 @@ public class FullTestOnAmazonTestCase {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
-        productPrice.clickOnTheWAtches("Mens Watches Chronograph Stainless Steel Waterproof Date Analog Quartz Watch Business Wrist Watches for Men");
+        productPrice.clickOnTheWAtches("HUGO #Chase Men's Multifunction Stainless Steel and Leather Strap Casual Watch, Color: Brown (Model: 1530162)");
         Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$31.05"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$195.00"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

@@ -45,14 +45,14 @@ public class TestCase_6_ForProductPrice {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
-        productPrice.clickOnTheWAtches("Mens Watches Chronograph Stainless Steel Waterproof Date Analog Quartz Watch Business Wrist Watches for Men");
+        productPrice.clickOnTheWAtches("HUGO #Chase Men's Multifunction Stainless Steel and Leather Strap Casual Watch, Color: Brown (Model: 1530162)");
         Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$31.05"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$195.00"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

@@ -24,17 +24,17 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement WatchButton;
     @FindBy(id = "octopus-dlp-sort-option")
     protected WebElement FilterButton;
-    @FindBy(linkText = "Avg. Customer Review")
-    protected WebElement PriceHighToLowButton;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[1]/ul/li[6]")
+    @FindBy(linkText = "Newest Arrivals")
+    protected WebElement NewestArrivals;
+    @FindBy(xpath = "//*[@id=\"thumbImages\"]/ul/li[7]")
     protected WebElement BeforePlayVideoButton;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div/div[2]/div/div[3]/ul/li[6]/span/span/div/div/div/div[12]/div/div/div[2]")
+    @FindBy(xpath = "//*[@id=\"unrolledImgNo6\"]/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;
     @FindBy(id = "add-to-cart-button")
     protected WebElement AddToCartButton;
     @FindBy(id = "nav-logo-sprites")
     protected WebElement MainPageButton;
-    @FindBy(xpath = "//div[@id=\"unrolledImgNo5\"]/div/div[4]/div[1]")
+    @FindBy(xpath = "//*[@id=\"unrolledImgNo6\"]/div/div[4]/div[1]")
     protected WebElement ZoomWindowButton;
 
 
@@ -70,8 +70,8 @@ public class Page_6_TodayDeals extends BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(FilterButton));
     }
 
-    public void clickOnTheAvgCustomerReview() {
-        PriceHighToLowButton.click();
+    public void clickOnTheNewestArrivals() {
+        NewestArrivals.click();
     }
 
     public void waitWhileTheUserClickOnTheWatches(String TitleOfWatches) {

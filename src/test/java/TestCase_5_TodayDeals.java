@@ -40,9 +40,9 @@ public class TestCase_5_TodayDeals {
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
-        todayDeals.clickOnTheAvgCustomerReview();
+        todayDeals.clickOnTheNewestArrivals();
         Thread.sleep(2000);
-        todayDeals.waitWhileTheUserClickOnTheWatches("Seiko Men's Essentials Japanese Quartz With Stainless Steel Strap, Silver (Model: SUR307)");
+        todayDeals.waitWhileTheUserClickOnTheWatches("Sport Retro Digital Chronograph Mesh Bracelet Watch, 40/8485");
         Thread.sleep(2000);
         todayDeals.clickOnTheBeforePlayVideo();
         Thread.sleep(2000);

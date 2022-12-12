@@ -25,7 +25,7 @@ public class Page_8_ProductPrice extends BasePage {
     @FindBy(className = "a-dropdown-container")
     protected WebElement FilterButton;
     @FindBy(linkText = "Price - High to Low")
-    protected WebElement DiscountLowToHighButton;
+    protected WebElement PriceHighToLow;
     @FindBy(xpath = "//div[@id=\"amazonGlobal_feature_div\"]/span[2]")
     protected WebElement DetailsButton;
     @FindBy(xpath = "//*[@id=\"a-popover-content-3\"]/table/tbody/tr[1]/td[3]/span")
@@ -71,7 +71,7 @@ public class Page_8_ProductPrice extends BasePage {
     }
 
     public void clickOnTheDiscountLowToHighButton() {
-        DiscountLowToHighButton.click();
+        PriceHighToLow.click();
     }
     public void clickOnTheWAtches(String enterWatches){
         new WebDriverWait(driver, Duration.ofMinutes(1)).until(ExpectedConditions.elementToBeClickable(By.linkText(enterWatches)));
