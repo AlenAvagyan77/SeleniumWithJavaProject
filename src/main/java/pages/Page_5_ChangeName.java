@@ -26,6 +26,8 @@ public class Page_5_ChangeName extends BasePage {
     protected WebElement NameLineButton;
     @FindBy(xpath = "/html/body/div[3]/div/div/div/form/div[2]/span/span/input")
     protected WebElement SaveChangesButton;
+    @FindBy(id = "nav-logo-sprites")
+    protected WebElement MainPageButton;
 
     public void clickOnTheAccountList() {
         AccountListButton.click();
@@ -72,5 +74,8 @@ public class Page_5_ChangeName extends BasePage {
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait1.until(ExpectedConditions.elementToBeClickable(SaveChangesButton));
 
+    }
+    public void clickOnTheHomePage(){
+        MainPageButton.click();
     }
 }

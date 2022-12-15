@@ -22,7 +22,7 @@ public class TestCase_6_ForProductPrice {
         homePage.openHomePage();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
-        softAssert.assertAll("An incorrect URL was opened");
+        softAssert.assertAll("An incorrect Amazon was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
         signIn.writeLogIn("043444255");
@@ -48,14 +48,14 @@ public class TestCase_6_ForProductPrice {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
-        productPrice.clickOnTheWAtches("HUGO #Chase Men's Multifunction Stainless Steel and Leather Strap Casual Watch, Color: Brown (Model: 1530162)");
+        productPrice.clickOnTheWAtches("BOBO BIRD Wooden Mens Watches Stylish Wood & Stainless Steel Combined Chronograph Military Quartz Casual Wristwatches");
         Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$195.00"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect(" $35.19"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();

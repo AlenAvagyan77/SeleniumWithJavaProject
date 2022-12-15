@@ -22,7 +22,7 @@ public class TestCase_5_TodayDeals {
         homePage.openHomePage();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
-        softAssert.assertAll("An incorrect URL was opened");
+        softAssert.assertAll("An incorrect Amazon was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickLogInField();
         signIn.writeLogIn("043444255");
