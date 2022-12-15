@@ -11,19 +11,17 @@ public class Page_1_SignIn extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[1]")
-    protected WebElement TodayDealButton;
     @FindBy(id = "nav-link-accountList")
-    protected WebElement clickLogInField;
+    protected WebElement AccountAndListButton;
     @FindBy(id = "continue")
-    protected WebElement clickContinueButton;
+    protected WebElement ContinueButton;
     @FindBy(name = "rememberMe")
-    protected WebElement checkBoxButton;
+    protected WebElement CheckBoxButton;
     @FindBy(id = "signInSubmit")
-    protected WebElement clickSignInButton;
+    protected WebElement SignInButton;
 
-    public void clickLogInField() {
-        clickLogInField.click();
+    public void clickAccountAndListButton() {
+        AccountAndListButton.click();
     }
 
     public void writeLogIn(String InputLogin) {
@@ -31,7 +29,7 @@ public class Page_1_SignIn extends BasePage {
     }
 
     public void clickContinueButton() {
-        clickContinueButton.click();
+        ContinueButton.click();
     }
 
 
@@ -40,10 +38,10 @@ public class Page_1_SignIn extends BasePage {
     }
 
     public void clickCheckBoxButton() {
-        checkBoxButton.click();
+        CheckBoxButton.click();
     }
 
     public void clickSignInButton() {
-        clickSignInButton.click();
+        SignInButton.click();
     }
 }

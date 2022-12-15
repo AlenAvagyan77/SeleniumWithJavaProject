@@ -21,7 +21,7 @@ public class FullTestOnAmazonTestCase {
         softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
         softAssert.assertAll("An incorrect Amazon was opened");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
-        signIn.clickLogInField();
+        signIn.clickAccountAndListButton();
         signIn.writeLogIn("043444255");
         signIn.clickContinueButton();
         signIn.clickPasswordField("043444255");
