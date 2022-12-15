@@ -23,6 +23,7 @@ public class Page_2_UsersLocation extends BasePage {
     }
 
     public void openChooseSection() {
+        System.out.println();
         System.out.println("--- Where is the user from ? ---");
         openChooseSection.click();
         openChooseSection.getText();

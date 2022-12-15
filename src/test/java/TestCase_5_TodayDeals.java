@@ -1,6 +1,7 @@
 import initDriver.BrowserType;
 import initDriver.DriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,9 +21,8 @@ public class TestCase_5_TodayDeals {
     public void SignInForAmazon() {
         HomePage homePage = new HomePage(DriverFactory.getDriver());
         homePage.openHomePage();
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
-        softAssert.assertAll("An incorrect Amazon was opened");
+        Assert.assertEquals(homePage.ActualTitle(), homePage.ExpectedTitle());
+        System.out.println("--- Opened the correct Amazon page ---");
         Page_1_SignIn signIn = new Page_1_SignIn(DriverFactory.getDriver());
         signIn.clickAccountAndListButton();
         signIn.writeLogIn("043444255");
