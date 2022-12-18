@@ -26,7 +26,7 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement FilterButton;
     @FindBy(linkText = "Newest Arrivals")
     protected WebElement NewestArrivals;
-    @FindBy(xpath = "//div[@id=\"thumbImages\"]/ul/li[7]")
+    @FindBy(xpath = "//*[@id=\"a-autoid-6\"]/span/input")
     protected WebElement BeforePlayVideoButton;
     @FindBy(xpath = "//*[@id=\"unrolledImgNo6\"]/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;

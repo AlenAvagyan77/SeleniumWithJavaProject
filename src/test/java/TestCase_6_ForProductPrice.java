@@ -48,14 +48,14 @@ public class TestCase_6_ForProductPrice {
         productPrice.clickOnTheFilterButton();
         Thread.sleep(1000);
         productPrice.clickOnTheDiscountLowToHighButton();
-        productPrice.clickOnTheWAtches("BOBO BIRD Wooden Mens Watches Stylish Wood & Stainless Steel Combined Chronograph Military Quartz Casual Wristwatches");
+        productPrice.clickOnTheWAtches("SEIKO Men's Stainless Steel Japanese Quartz Dress Watch with Leather Strap, Brown, 10 (Model: SUR450)");
         Thread.sleep(2000);
         productPrice.clickOnTheDetailsButton();
         Thread.sleep(2000);
         productPrice.getPriceOfWatches();
         productPrice.GetTextOfWatches();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect(" $35.19"));
+        softAssert.assertEquals(productPrice.getPriceOfWatches(), productPrice.ThePriceYouExpect("$115.01"));
         softAssert.assertAll("Please enter correct price, Correct  price is a " + productPrice.getPriceOfWatches());
         productPrice.clickAddToCartButton();
         productPrice.clickOnTheMainPageButton();
