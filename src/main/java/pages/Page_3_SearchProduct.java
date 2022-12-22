@@ -40,7 +40,7 @@ public class Page_3_SearchProduct extends BasePage {
     }
 
     public void clickOnTheProduct() {
-        driver.findElement(By.linkText("Dell Inspiron 15.6-inch Full HD Touch Screen AMD Ryzen 5 3450U Quad-Core 8GB RAM 256GB SSD Windows 10 Laptop")).click();
+        driver.findElement(By.linkText("Dell Inspiron 15 3000 15.6-inch Full HD 11th Gen Intel Core i5-1135G7 12GB 256GB SSD Laptop")).click();
 
     }
     public void clickAddToCartButton(){

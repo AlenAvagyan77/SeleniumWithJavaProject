@@ -27,6 +27,9 @@ public class Page_4_CartSection extends BasePage{
     }
     public void deleteAllProductOfList() throws InterruptedException {
        List<WebElement> elements = driver.findElements(By.xpath("//img[@class = \"sc-product-image\"]"));
+        System.out.println("--- How many items were in your cart? ---");
+        System.out.println("There was" + " " + elements.size() + " " + "item in your cart.");
+        System.out.println();
         for (int i = 0; i < elements.size(); i++) {
             DeleteButton.click();
             Thread.sleep(1000);

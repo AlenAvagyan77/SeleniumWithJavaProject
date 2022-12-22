@@ -18,15 +18,15 @@ public class Page_6_TodayDeals extends BasePage {
 
     @FindBy(linkText = "Today's Deals")
     protected WebElement TodayDealsButton;
-    @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[33]")
+    @FindBy(xpath = "//div[@id=\"grid-main-container\"]/div[2]/span[3]/ul/li[32]")
     protected WebElement MensWatchesButton;
     @FindBy(linkText = "Watches from Fossil, Anne Klein, Timex, and more")
     protected WebElement WatchButton;
     @FindBy(id = "octopus-dlp-sort-option")
     protected WebElement FilterButton;
-    @FindBy(linkText = "Newest Arrivals")
-    protected WebElement NewestArrivals;
-    @FindBy(xpath = "//*[@id=\"a-autoid-6\"]/span/input")
+    @FindBy(linkText = "Price: Low to High")
+    protected WebElement PriceLowToHigh;
+    @FindBy(xpath = "//*[@id=\"thumbImages\"]/ul/li[7]")
     protected WebElement BeforePlayVideoButton;
     @FindBy(xpath = "//*[@id=\"unrolledImgNo6\"]/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;
@@ -70,8 +70,8 @@ public class Page_6_TodayDeals extends BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.elementToBeClickable(FilterButton));
     }
 
-    public void clickOnTheNewestArrivals() {
-        NewestArrivals.click();
+    public void clickOnThePriceLowToHigh() {
+        PriceLowToHigh.click();
     }
 
     public void waitWhileTheUserClickOnTheWatches(String TitleOfWatches) {
@@ -81,7 +81,7 @@ public class Page_6_TodayDeals extends BasePage {
     }
 
     public void clickOnTheBeforePlayVideo() {
-        new WebDriverWait(driver, Duration.ofSeconds(4)).until(ExpectedConditions.visibilityOf(BeforePlayVideoButton));
+        new WebDriverWait(driver, Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(BeforePlayVideoButton));
         BeforePlayVideoButton.click();
     }
 
