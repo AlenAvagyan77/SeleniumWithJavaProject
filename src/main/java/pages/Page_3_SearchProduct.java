@@ -40,7 +40,7 @@ public class Page_3_SearchProduct extends BasePage {
     }
 
     public void clickOnTheProduct() {
-        driver.findElement(By.linkText("Dell Inspiron 15 3000 15.6-inch Full HD 11th Gen Intel Core i5-1135G7 12GB 256GB SSD Laptop")).click();
+        driver.findElement(By.linkText("2021 Newest Dell Inspiron 15 3000 3501 Laptop, 15.6\" Full HD 1080P Screen, 11th Gen Intel Core i5-1135G7 Quad-Core Processor, 16GB RAM, 256GB SSD + 1TB HDD, Webcam, HDMI, Wi-Fi, Windows 10 Home, Black")).click();
 
     }
     public void clickAddToCartButton(){

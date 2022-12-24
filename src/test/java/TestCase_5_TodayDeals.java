@@ -44,10 +44,14 @@ public class TestCase_5_TodayDeals {
         Thread.sleep(2000);
         todayDeals.clickOnTheFilterButton();
         Thread.sleep(1000);
+        todayDeals.clickOnTheDiscountHighToLow();
+        Thread.sleep(2000);
+        todayDeals.waitWhileTheUserClickOnTheWatches("Save on Nautica Men's NAPOBS110 Ocean Beach Yellow-Gold/Black/Black Silicone Strap Watch and more");
+        Thread.sleep(2000);
+        todayDeals.clickOnThePrimeButton();
+        todayDeals.clickSecondTimeFilterButton();
         todayDeals.clickOnThePriceLowToHigh();
-        Thread.sleep(2000);
-        todayDeals.waitWhileTheUserClickOnTheWatches("Women's NW/1981 Sunray Dial Mesh Bracelet Watch");
-        Thread.sleep(2000);
+        todayDeals.waitWhileTheUserClickOnTheSecondWatches("Nautica Men's Quartz Resin Silicone Watch");
         todayDeals.clickOnTheBeforePlayVideo();
         Thread.sleep(2000);
         todayDeals.waitWhileElementIsNotVisible();
