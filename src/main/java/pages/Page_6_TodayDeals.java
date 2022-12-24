@@ -25,7 +25,7 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement FilterButton;
     @FindBy(linkText = "Discount - High to Low")
     protected WebElement DiscountHighToLow;
-    @FindBy(xpath = "//*[@id=\"thumbImages\"]/ul/li[4]")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/div/div[1]/ul/li[4]")
     protected WebElement BeforePlayVideoButton;
     @FindBy(xpath = "//div[@id=\"unrolledImgNo3\"]/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;
@@ -106,8 +106,12 @@ public class Page_6_TodayDeals extends BasePage {
     }
 
     public void clickOnTheBeforePlayVideo() {
-        new WebDriverWait(driver, Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(BeforePlayVideoButton));
-        BeforePlayVideoButton.click();
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(BeforePlayVideoButton));
+            BeforePlayVideoButton.click();
+        } catch (Exception e) {
+            System.out.println("I couldn't click on the BeforePlayVideo");
+        }
     }
 
 
