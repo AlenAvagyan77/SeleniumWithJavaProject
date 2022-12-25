@@ -57,12 +57,12 @@ public class FullTestOnAmazonTestCase {
         Thread.sleep(1000);
         todayDeals.clickOnTheDiscountHighToLow();
         Thread.sleep(2000);
-        todayDeals.waitWhileTheUserClickOnTheWatches("Save on Nautica Men's NAPOBS110 Ocean Beach Yellow-Gold/Black/Black Silicone Strap Watch and more");
+        todayDeals.waitWhileTheUserClickOnTheWatches("Save on Nautica Men's Stainless Steel Quartz Silicone Strap, Blue, 22 Casual Watch (Model: NAPFWF115) and more");
         Thread.sleep(2000);
         todayDeals.clickOnThePrimeButton();
         todayDeals.clickSecondTimeFilterButton();
-        todayDeals.clickOnThePriceLowToHigh();
-        todayDeals.waitWhileTheUserClickOnTheSecondWatches("Nautica Men's Quartz Resin Silicone Watch");
+        todayDeals.clickOnThePriceHighToLow();
+        todayDeals.waitWhileTheUserClickOnTheSecondWatches("Nautica Men's N20503G NST Stainless Steel Watch");
         todayDeals.clickOnTheBeforePlayVideo();
         Thread.sleep(2000);
         todayDeals.waitWhileElementIsNotVisible();

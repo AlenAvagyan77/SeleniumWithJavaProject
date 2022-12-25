@@ -27,7 +27,7 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement DiscountHighToLow;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/div/div[1]/ul/li[4]")
     protected WebElement BeforePlayVideoButton;
-    @FindBy(xpath = "//div[@id=\"unrolledImgNo3\"]/div/div[12]/div/div/div[2]")
+    @FindBy(xpath = "//*[@id=\"unrolledImgNo3\"]/div/div[12]/div/div/div[2]")
     protected WebElement PlayVideoButton;
     @FindBy(id = "add-to-cart-button")
     protected WebElement AddToCartButton;
@@ -37,8 +37,8 @@ public class Page_6_TodayDeals extends BasePage {
     protected WebElement ZoomWindowButton;
     @FindBy(xpath = "//div[@id=\"s-refinements\"]/div[3]/ul/li/span/a/div")
     protected WebElement PrimeButton;
-    @FindBy(linkText = "Price: Low to High")
-    protected WebElement PriceLowToHighButton;
+    @FindBy(linkText = "Price: High to Low")
+    protected WebElement PriceHighToLowButton;
 
 
     public void clickOnTheTodayDealButton() {
@@ -94,8 +94,8 @@ public class Page_6_TodayDeals extends BasePage {
         FilterButton.click();
     }
 
-    public void clickOnThePriceLowToHigh() {
-        PriceLowToHighButton.click();
+    public void clickOnThePriceHighToLow() {
+        PriceHighToLowButton.click();
     }
 
 
@@ -107,6 +107,8 @@ public class Page_6_TodayDeals extends BasePage {
 
     public void clickOnTheBeforePlayVideo() {
         try {
+            driver.navigate().refresh();
+
             new WebDriverWait(driver, Duration.ofSeconds(6)).until(ExpectedConditions.visibilityOf(BeforePlayVideoButton));
             BeforePlayVideoButton.click();
         } catch (Exception e) {

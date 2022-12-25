@@ -50,7 +50,7 @@ public class TestCase_5_TodayDeals {
         Thread.sleep(2000);
         todayDeals.clickOnThePrimeButton();
         todayDeals.clickSecondTimeFilterButton();
-        todayDeals.clickOnThePriceLowToHigh();
+        todayDeals.clickOnThePriceHighToLow();
         todayDeals.waitWhileTheUserClickOnTheSecondWatches("Nautica Men's Quartz Resin Silicone Watch");
         todayDeals.clickOnTheBeforePlayVideo();
         Thread.sleep(2000);
